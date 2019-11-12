@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Assignment 1</title>
+    <link rel="stylesheet" href="./css/frontend.css">
   </head>
   <body>
-    <nav>
-      <a href="about.html">About</a> |
-      <a href="projects.html">Projects</a>
+    <nav class = "nav">
+      <img class = "logo" src="./assets/space.png" alt="space">
+      <div class="nav-items">
+        <a href="about.html" class='to-dissapear'>
+          <img src="./assets/home.png" class="logo" alt="home">
+          <a href="about.html" class='to-appear'>About</a>
+        </a>
+        <a href="projects.html">Projects</a>
+      </div>
     </nav>
-    <br>
-    <br>
-    <header><h2>HOME</h2></header>
-    <section>
+
+    <section class = 'content-container'>
+      <h2>HOME</h2>
       <div class="detail-container">
         <p>Name: Shaurya Sinha</p>
         <p>Welcome to my portfolio website. I will be your guide.</p>
@@ -51,5 +57,6 @@
         </ol>
       </div>
     </section>
+
   </body>
 </html>
