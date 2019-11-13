@@ -3,60 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Assignment 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/frontend.css">
   </head>
   <body>
     <nav class = "nav">
       <img class = "logo" src="./assets/space.png" alt="space">
       <div class="nav-items">
-        <a href="about.html" class='to-dissapear'>
-          <img src="./assets/home.png" class="logo" alt="home">
-          <a href="about.html" class='to-appear'>About</a>
-        </a>
+        <a href="about.html" class='to-appear'>About</a>
         <a href="projects.html">Projects</a>
       </div>
     </nav>
 
-    <section class = 'content-container'>
-      <h2>HOME</h2>
-      <div class="detail-container">
-        <p>Name: Shaurya Sinha</p>
-        <p>Welcome to my portfolio website. I will be your guide.</p>
-        <p>Before you continue, here's a picture of a danger noodle in case your day has been bad.</p>
+    <div class = 'content-container'>
+      <section class='introduction'>
+        <h1>Hi!</h1>
+        <h1>I'm <span class="effect-shine">Shaurya Sinha</span></h1>
+        <h1>Web Developer, Full-stack SWE and Cloud Architect</h1>
+        <iframe id='player' src="https://open.spotify.com/embed/user/spotify/playlist/515SPWxgiEg1PTa93bjJZS" frameborder="0" allowtransparency="true"></iframe>
 
-        <img src="https://i.redd.it/yj0ny67qe5601.jpg" alt="Snake in a quilt" style="width: 200px; height: 200px;">
-        <p>Details of how that snake ended up in that sweater can be found <a target="_blank" href="https://www.reddit.com/r/aww/comments/7m44jt/my_sister_made_a_sweater_for_spaghettii_think_he/">here</a>.</p>
-        <br>
-        <br>
-        <p>And here's a table of the stuff I like to do with percentage of how much I like it:</p>
-        <table>
-          <tr>
-            <th>Index</th>
-            <th>Topic</th>
-            <th>Percentage</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Movies</td>
-            <td>100%</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Games</td>
-            <td>100%</td>
-          </tr>
-        </table>
+         <button id="contact" onclick="location.href='mailto:shaurya157@gmail.com';">Contact Me</button>
+      </section>
 
-        <p>Now that we know more about me, here are some things I'd like to learn:</p>
-        <ol>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>Cloud Architecture</li>
-          <li>Web Dev</li>
-        </ol>
-      </div>
-    </section>
+    </div>
 
   </body>
 </html>

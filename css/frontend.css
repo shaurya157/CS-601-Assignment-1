@@ -1,14 +1,20 @@
 *{
   margin: 0;
   padding: 0;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+  color: #08fdd8;
 }
 .nav{
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: black;
+  background: rgb(24,24,24);
   width: 100px;
-  position: absolute;
+  position: fixed;
   top: 0;
   align-items: center;
 }
@@ -20,8 +26,14 @@
 }
 
 .content-container{
-  margin-left: 150px;
-  margin-top: 50px;
+  margin-left: 100px;
+  /* background: rgb(29,29,29); */
+}
+
+.introduction{
+    background-image: url("../assets/bg1.jpg");
+    height: 100vh;
+    background-size: cover;
 }
 
 .nav-items{
@@ -31,10 +43,26 @@
   margin-top: 30vh;
 }
 
+.nav-items * {
+  width: 100%;
+}
+
 .nav-items a   {
   margin-top: 50px;
   text-decoration: none;
   color: #08fdd8;
+}
+
+.introduction{
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introduction h1 {
+  width: 350px;
+  margin-top: 20px;
 }
 /*
 html body{
@@ -42,14 +70,99 @@ html body{
   flex-direction: row;
 } */
 
-.to-appear{
-  display: none;
+#contact{
+  width: 150px;
+  border-radius: 20px;
+  background: #08fdd8;
+  border: none;
+  height: 40px;
+  margin-top: 20px;
+  color: black;
+  font-weight: bold;
 }
 
-.to-dissapear:hover{
-  display: none;
+#contact:hover {
+  background-color: white;
+  color: #08fdd8;
+  border: 1px solid #08fdd8;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.to-dissapear:hover + .to-apear{
-  display: block;
+#player{
+  position:fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height:300px;
+}
+
+.project{
+  background-image: url("../assets/bg2.jpg");
+  display: flex;
+  flex-direction: row;
+}
+
+.project-individual{
+  /* width: 50%; */
+  height: 30%;
+}
+
+.project-description{
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+  height:100%;
+}
+
+.project-showcase{
+  width: 100%;
+  height: 100%;
+}
+
+.project-showcase iframe{
+  width: 100%;
+  height:100%;
+}
+
+.temp{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  height: 100px;
+  padding: 10px;
+  width: 300px;
+  background: black;
+  -webkit-box-shadow: 6px 9px 20px 7px #000000;
+box-shadow: 6px 9px 20px 7px #000000;
+}
+
+.introduction h1{
+  color: white;
+}
+
+.introduction span, .introduction.project h1{
+  color: #08fdd8;
+}
+
+
+/* effect-shine */
+span.effect-shine:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+.introduction.about{
+  background-image: url("../assets/bg3.jpg");
 }

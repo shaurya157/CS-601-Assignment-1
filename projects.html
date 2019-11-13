@@ -2,20 +2,92 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Projects</title>
+    <title>Assignment 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/frontend.css">
+    <script type="text/javascript">
+    var url = data.url + "&output=embed";
+window.location.replace(url);
+    </script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a>
+    <nav class = "nav">
+      <img class = "logo" src="./assets/space.png" alt="space">
+      <div class="nav-items">
+        <a href="about.html" class='to-appear'>About</a>
+        <a href="index.html">Home</a>
+      </div>
     </nav>
-    <br>
-    <br>
-    <header><h2>Projects</h2></header>
-    <section>
-      <p>I have coded lots of projects in the past. <a href="https://github.com/VictorAw/Text-Categorizer">Here</a> is a machine learning project I made the details of which can be found here:</p>
-      <img style="height: 600px; width: 1000px;" src="https://raw.githubusercontent.com/VictorAw/Text-Categorizer/master/screenshots/home.png" alt="details">
-      <p></p>
-    </section>
+
+    <div class = 'content-container'>
+      <section class='introduction project'>
+        <div class="project-description">
+          <div class="project-individual">
+            <h1>Moodify</h1>
+            </p>
+            A full-stack, RESTful music streaming app inspired by Spotify
+            <p>
+            <p style="font-style: italic;">
+              Purpose: A showcase of my full stack skills upon graduation of App Academy
+            </p>
+
+            <ul>
+              <li>
+                Created a user-friendly experience by styling application using custom CSS
+              </li>
+              <li>
+                Integrated a cloud platform API (Cloudinary) to host images & songs for minimal latency
+              </li>
+            </ul>
+          </div>
+          <div class="project-individual">
+            <h1>Text Categorizer</h1>
+            <p style="font-style: italic;">
+              A back-end, machine learning algorithm which categorizes text
+            </p>
+
+            <ul>
+              <li>
+                Implemented a perceptron neural net model & a hand rolled machine learning algorithm
+              </li>
+              <li>
+                Analysed text using the Stanford Core NLP library allowing users to input any text
+              </li>
+              <li>
+                Achieved 75%+ accuracy on training data sets through analysis of 100,000 pieces of text
+              </li>
+            </ul>
+          </div>
+          <div class="project-individual">
+            <h1>Moodify</h1>
+            <p style="font-style: italic;">
+              Purpose: A showcase of my full stack skills upon graduation of App Academy
+            </p>
+
+            <ul>
+              <li>
+                Created a user-friendly experience by styling application using custom CSS
+              </li>
+              <li>
+                Improved performance by reducing minimal AJAX requests and fine-tuned Redux cycles
+              </li>
+              <li>
+                Enhanced user authentication through BCrypt’s secure password hashing function
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-showcase">
+          <iframe target="_parent" src="https://open.spotify.com/embed/user/spotify/playlist/515SPWxgiEg1PTa93bjJZS" frameborder="0" allowtransparency="true">
+            <p>Your browser does not support iframes.</p>
+          </iframe>
+        </div>
+      </section>
+    </div>
+
+    <div class="temp">
+      This iFrame is just here for now. I will be removing it in the future when JS is allowed to show a version of the projects i've worked on.
+    </div>
   </body>
 </html>
