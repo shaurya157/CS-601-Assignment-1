@@ -180,7 +180,7 @@ box-shadow: 6px 9px 20px 7px #000000;
   width: 300px;
 }
 
-button{
+button, .btn{
   margin-top: 20px;
   width: 300px;
   padding: 5px;
