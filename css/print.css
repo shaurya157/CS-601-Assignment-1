@@ -1,0 +1,10 @@
+@media print {
+ /* All your print styles go here */
+ .nav{
+   display: none;
+ }
+
+ .temp{
+   display: none;
+ }
+}
