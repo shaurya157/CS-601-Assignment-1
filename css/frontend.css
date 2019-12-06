@@ -226,3 +226,29 @@ input{
   width: 80%;
   margin-bottom: 20px;
 }
+
+tr{
+  text-align: center;
+}
+
+td{
+  margin-top: 20px;
+}
+
+table{
+  width: 85%;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.introduction.json{
+  align-items: center;
+}
+
+.about p {
+  margin-top: 10px;
+  width: 50%;
+}

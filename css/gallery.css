@@ -1,0 +1,98 @@
+/* layout */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-auto-rows: 12rem;
+  grid-gap: 16px;
+  grid-auto-flow: dense;
+}
+
+.grid--big-columns {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+.grid--big-gap {
+  grid-gap: 2.5rem;
+}
+
+/* styling */
+
+.photo--expanded {
+  grid-column: span 3;
+  grid-row: span 3;
+  .photo__img {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+  animation-delay: 0.3s;
+}
+
+.photo {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo__img {
+  transition: transform 1s;
+}
+
+body {
+  background-color: #191919;
+  color: lightgray;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+a {
+  font-weight: bold;
+  color: #7396e4;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code {
+  color: #7396e4;
+}
+
+.gallery{
+  background: none;
+}
+
+.photo div{
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+
+.hide{
+  display: none;
+}
