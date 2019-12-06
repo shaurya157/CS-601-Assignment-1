@@ -1,7 +1,7 @@
 html, body * { box-sizing: border-box;}
 
 .frame {
-  height: 700px;
+  height: 500px;
   width: 430px;
   background:
     linear-gradient(
@@ -76,4 +76,8 @@ form {
   text-align: center;
   color: red;
   margin-bottom: 10px;
+}
+
+textarea{
+  height: 100px !important;
 }

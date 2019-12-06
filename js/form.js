@@ -1,52 +1,41 @@
 $(function(){
-  $("#tobe").click(function(){
-    if($("#not2be").is(":checked")){
-      $("#not2be").prop("checked", false);
+  function validateEmail(mail){
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+      return (true)
     }
-  });
 
-  $("#not2be").click(function(){
-    if($("#tobe").is(":checked")){
-      $("#tobe").prop("checked", false);
-    }
-  });
-
+    return (false)
+  }
 
   $(form).submit(function(event){
     event.preventDefault();
-    let fname = $("#firstname").val();
-    let lname = $("#lastname").val();
-    let facilitator = $("#facilitator").val().toLowerCase();
-    let tobe = $("#tobe").is(":checked");
-    let nottobe = $("#not2be").is(":checked");
-    let line1 = $("#line1").is(":checked");
-    let line2 = $("#line2").is(":checked");
-    let line3 = $("#line3").is(":checked");
+    let email = $("#email").val();
+    let subject = $("#subject").val();
+    let content = $("#content").val();
 
-    if(fname.length <= 2 || fname.match(/\d+/g)){
-      $("#fname-error").show()
+    if(!validateEmail(email)){
+      $("#email-error").show()
       return
     }
 
-    if(lname.length <= 2 || lname.match(/\d+/g)){
-      $("#lname-error").show()
+    if(subject.length <= 2 || subject.match(/\d+/g)){
+      $("#subject-error").show()
       return
     }
 
-    if(facilitator != "laura" && facilitator != "fazil" && facilitator != "harsh"){
-      $("#faci-error").show()
+    if(content.length < 2){
+      $("#content-error").show();
       return
     }
 
-    let data = {
-      fname,
-      lname,
-      facilitator
-    }
+    var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + content;
 
-    setTimeout(function() {
-        $('#assignmentForm').get(0).submit();
-    }, 1000);
+    win = window.open(mailto_link, 'emailWindow');
+
+
+    // setTimeout(function() {
+    //     $('#assignmentForm').get(0).submit();
+    // }, 1000);
 
   })
 })

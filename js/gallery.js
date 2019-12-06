@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       btn[i].onclick = function(event) {
         event.stopPropagation();
         modal.style.display = "block";
+        $("body").addClass("modal-open");
         let el = event.target.parentElement.children[1].src
         console.log(el);
 
@@ -72,7 +73,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       let comments = snapshot.val().comments
 
       Object.keys(comments).forEach((comment, idx) => {
-        $('#comments-container').append(`<p>${comments[comment]}</p>`)
+        $('#comments-container').append(`<p style="margin-top: 5px;">&nbsp&nbsp&nbsp- ${comments[comment]}</p>`)
       })
     })
   }
@@ -98,20 +99,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
+
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
+      $("body").removeClass("modal-open")
     }
   }
 
   $("#comment-submit").click(function(event){
     let comment = $("#modal-input").val();
+    $("#modal-input").val('');
     if(comment.length == 0){
       return;
     } else {
@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       let ref = url.slice(url.indexOf("photo"), url.length - 2);
 
       imagesRef.child(ref).child('comments').push(comment);
-      $('#comments-container').append(`<p>${comment}</p>`);
+      $('#comments-container').append(`<p style="margin-top: 5px;">&nbsp&nbsp&nbsp- ${comment}</p>`);
     }
   })
 });
